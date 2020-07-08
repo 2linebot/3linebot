@@ -32,6 +32,6 @@ def job():
             print(e.reason)
         except StopIteration:
             break
-sched.add_job(job, 'cron', hour='11-23,0-4', minute='*')
+sched.add_job(job, 'cron', hour='9-23,0-4', minute='*')
 
 sched.start()
