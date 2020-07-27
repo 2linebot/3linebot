@@ -24,6 +24,10 @@ def job():
 
     for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
         try:
+            print("---")
+            print("Time of Alert:")
+            print(tweet.created_at)
+            print("Alert Info:")
             print(tweet.text)
             tweet.retweet()
             time.sleep(1)
